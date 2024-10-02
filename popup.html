@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udemy Video Downloader</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+   <div style="width: 400px; height: 160px;">
+    <div class="nine">
+        <h1>Udemy Downloader<span><img src="imges/icon-128.png" alt="Udemy" id="Udemy_img"></img></span></h1>
+      </div>
+
+  <div id="table_parent">
+    <div class="table-container" id="table-container" >
+        <div class="table-row">
+            <div class="table-cell">Resolution</div>
+            <div class="table-cell">Progress</div>
+            <div class="table-cell">Download</div>
+            <div class="table-cell">Cancel</div>
+        </div>
+        <div id="wait" class="wait">Please wait, data is loading...</div>
+        <div id="nodata" class="wait" style="display: none;">No Data Found!!</div>
+       
+    </div>
+        <div class="table-container" id="table-container2"style="display: none;" >
+            <div class="table-row">
+                <div class="table-cell">File Type</div>
+              
+                <div class="table-cell">Download</div>
+             
+            </div>
+
+    </div>
+</div>
+
+    
+  <div>
+    <img src="imges/refresh.png" alt=""  id="refrsh" title="Refresh to update video list" >
+    <div id="refresh_text">Refresh</div>
+</div>
+
+</div> 
+
+
+   <script src="popup.js"></script>
+
+
+</body>
+</html>
+

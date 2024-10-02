@@ -1,0 +1,53 @@
+
+  {
+    "manifest_version": 3,
+    "name": "__MSG_extName__",
+    "version": "1.0.0",
+    "description": "__MSG_Description__",
+      "default_locale": "en",
+    "action": {
+        "default_popup": "popup.html"
+    
+      },
+    
+    "permissions": [
+      "tabs",
+      "webRequest",
+      "downloads",
+      "storage"    
+    ],
+    "content_security_policy": {
+      "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+    },
+    "host_permissions": [
+      
+        "*://*/*" 
+      ],
+    "background": {
+      "service_worker": "background.js"
+    },
+
+    "content_scripts": [
+      {
+        "matches": ["*://*.udemy.com/*"],
+        "js": ["content.js"],
+        "css": ["content.css"],
+        "run_at": "document_start"
+      }
+    
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["chrome-extension://inhinfnjeggnbfdcoihondefmjfoaibo/imges/udmy_icon.png","imges/*" ],
+        "matches": ["<all_urls>"]
+      }
+    ],
+   
+    "icons": {
+      "16": "imges/icon-16.png",
+      "48": "imges/icon-48.png",
+      "128": "imges/icon-128.png"
+  
+    } 
+  }
+  
